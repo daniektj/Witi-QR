@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="easy.qrcode.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="assets/js/app_qr.js"></script>
+    <title>QR Generador</title>
+</head>
+
+<body>
+
+    <!-- <h1>WiTI - Códigos QR</h1> -->
+
+    <div class="main">
+        <form action="" id="formulario" class="main__form">
+            <input type="text" id="data" name="data" placeholder="Código" autocomplete="off" required>
+            <div class="main__form-container">
+                <input type="text" id="pantalla" name="pantalla" placeholder="Pantalla" autocomplete="off" required>
+                <input type="text" id="cpu" name="cpu" placeholder="CPU " autocomplete="off" required>
+            </div>
+
+                <input type="text" id="desc" name="desc" placeholder="Descripción" autocomplete="off" required>
+                <input type="date" name="fecha" id="fecha" required>
+
+                <!-- <label for="pet-select">selecciona:</label> -->
+
+         <!--        <select name="pets" id="pet-select">
+                    <option value="">Pantalla</option>
+                    <option value="8.3">8.3</option>
+                    <option value="10.9">10.9</option>
+                    <option value="11">11</option>
+                    <option value="12.9">12.9</option>
+                    <option value="13">13</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select> -->
+
+            <!-- </div> -->
+            <button type="submit" class="main__button">Generar QR</button>
+        </form>
+
+        <div class="main__qr-image" id="qrcode">
+            <img src="assets/images/preview.jpg" width="256px" height="256px" alt="QR - Witi">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
