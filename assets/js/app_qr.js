@@ -4,6 +4,7 @@ const cpu = document.getElementById('cpu');
 const pantalla = document.getElementById('pantalla');
 const fecha = document.getElementById('fecha');
 const fileInput = document.getElementById("archivo");
+const downloadBtn = document.getElementById('downloadBtn');
 // let ruta = '';
 
 // Con este Listener actualizamos la Data
@@ -65,7 +66,7 @@ function codi() {
     obj.innerHTML = ""
     // Construimos el texto con saltos de línea
     /* let textData = `Código: ${data.value}\nDescripcion: ${desc.value}\nCPU: ${cpu.value}\nPantalla: ${cpu.value}\nFecha: ${fecha.value}`; */
-    let textData = `Código: ${data.value}\nPantalla: ${cpu.value}\nCPU: ${cpu.value}\nDescripcion: ${desc.value}\nFecha: ${fecha.value}` ;
+    let textData = `Código: ${data.value}\nPantalla: ${pantalla.value}\nCPU: ${cpu.value}\nDescripcion: ${desc.value}\nFecha: ${fecha.value}` ;
 
 
     let options = {
@@ -83,6 +84,19 @@ function codi() {
     // Crea el QRCode usando la libreria
     new QRCode(document.getElementById("qrcode"), options);
 
+        // Muestra el botón de descarga
+        downloadBtn.style.display = 'block';
+
 }
+
+// Evento para descargar la imagen del QR
+downloadBtn.addEventListener('click', () => {
+    const qrCanvas = document.querySelector('#qrcode canvas');
+    const qrImage = qrCanvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.href = qrImage;
+    link.download = 'qr_code.png';
+    link.click();
+});
 
 
