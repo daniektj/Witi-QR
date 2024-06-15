@@ -112,24 +112,43 @@ h3 {
   width: 100%;
 }
 
+
 #downloadBtn {
   box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Alinea el contenido verticalmente */
+  justify-content: center; /* Alinea el contenido horizontalmente */
+  gap: 4px;
   width: auto;
-  display: inline;
   position: absolute;
   right: 118px;
   bottom: 20px;
   background-color: orange;
   border: 3px #181C2A  solid;
   padding: 6px 16px;
-  padding-left: 36px;
+  /* padding-left: 36px; */
   font-size: 14px;
   font-weight: 600;
-  background-image: url(../images/download.svg);
+  border-radius: 8px;
+  /* background-image: url(../images/download.svg);
   background-repeat: no-repeat;
   background-position: 8px center;
-  background-size: 20px 20px;
+  background-size: 20px 20px; */
 }
+
+#downloadBtn svg {
+  /* margin-right: 8px; */
+  width: 20px;
+  height: 20px;
+}
+
+#downloadBtn:hover{
+  background-color: rgb(245, 98, 44);
+  color: white;
+  cursor: pointer;
+}
+
+
 
 
 

@@ -85,7 +85,7 @@ function codi() {
     new QRCode(document.getElementById("qrcode"), options);
 
         // Muestra el botón de descarga
-        downloadBtn.style.display = 'block';
+        downloadBtn.style.display = 'flex';
 
 }
 
